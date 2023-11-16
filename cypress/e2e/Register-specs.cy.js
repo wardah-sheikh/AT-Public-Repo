@@ -13,7 +13,7 @@ const email = faker.internet.email()
 const company = faker.company.name()
 const password = faker.internet.password()
 
-describe('TS_01: To verify Register functioanlity', () => {
+describe('TS_01: To verify Register functionality', () => {
   beforeEach("Visiting Website", ()=>{
     cy.visit('/')
   })
