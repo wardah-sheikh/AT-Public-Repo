@@ -3,6 +3,7 @@ import {faker} from '@faker-js/faker'
 import fixtureData from '../fixtures/test_data.json'
 
 const Register = new RegisterForm()
+
 const firstName = faker.person.firstName()
 const lastName = faker.person.lastName()
 const date = '10'
