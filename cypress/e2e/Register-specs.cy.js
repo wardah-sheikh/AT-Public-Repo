@@ -3,6 +3,7 @@ import {faker} from '@faker-js/faker'
 import fixtureData from '../fixtures/test_data.json'
 
 const Register = new RegisterForm()
+
 const firstName = faker.person.firstName()
 const lastName = faker.person.lastName()
 const date = '10'
@@ -12,7 +13,7 @@ const email = faker.internet.email()
 const company = faker.company.name()
 const password = faker.internet.password()
 
-describe('TS_01: To verify Register functioanlity', () => {
+describe('TS_01: To verify Register functionality', () => {
   beforeEach("Visiting Website", ()=>{
     cy.visit('/')
   })

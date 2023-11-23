@@ -1,4 +1,5 @@
 export class RegisterForm {
+    
     clickRegisterButton(){
         cy.contains('Register').click()
     }
