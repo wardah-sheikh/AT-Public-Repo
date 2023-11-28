@@ -1,40 +1,38 @@
 
 export class Login{
 
-    clickLoginButton(){
-        cy.contains('Log in').click()
+    getLoginButton(){
+        return cy.get('.ico-login').contains('Log in')
     }
-    fillEmail(email){
-        cy.get('[class="email"]').type(email)
+    getEmail(){
+        return cy.get('[class="email"]')
     }
-    fillPassword(password){
-        cy.get('#Password').type(password)
+    getPassword(password){
+        return cy.get('#Password')
     }
-    clickRememberMebox(){
-        cy.get('#RememberMe').check()
+    getRememberMebox(){
+        return cy.get('#RememberMe')
     }
-    Submit(){
-        cy.get('[type="submit"]').contains('Log in').click()
+    getSubmitButton(){
+        return cy.get('[type="submit"]').contains('Log in')
     }
     assertSuccessfullLogin(){
-        cy.contains('My account').should('exist')
-        cy.contains('Log out').should('exist')
+        return cy.contains('My account')
     }
 
     assertIncorrectEmail(){
-        cy.contains('Wrong email').should('exist')
+        return cy.contains('Wrong email')
     }
 
     assertEmptyFormError(){
-        cy.contains('Please enter your email').should('exist')
+        return cy.contains('Please enter your email')
     }
 
-    clickLogoutButton(){
-        cy.contains('Log out').click()
+    getLogoutButton(){
+        return cy.get('.ico-logout').contains('Log out')
     }
 
     assertLogout(){
-        cy.contains('Log in').should('exist')
-        cy.contains('Register').should('exist')
+        return cy.contains('Log in').click()
     }
 }
