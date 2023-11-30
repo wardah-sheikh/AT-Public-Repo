@@ -1,65 +1,59 @@
 export class RegisterForm {
     
-    clickRegisterButton(){
-        cy.contains('Register').click()
+    getGenderButton(){
+        return cy.get('#gender-female')
     }
-    selectGenderButton(){
-        cy.get('#gender-female').click()
+    getFirstName(){
+        return cy.get('#FirstName')
     }
-    fillFirstName(Fname){
-        cy.get('#FirstName').type(Fname)
+    getLastName(){
+        return cy.get('#LastName')
     }
-    fillLastName(Lname){
-        cy.get('#LastName').type(Lname)
+    getDate(){
+        return cy.get('[name="DateOfBirthDay"]')
     }
-    selectDate(date){
-        cy.get('[name="DateOfBirthDay"]').select(date)
+    getMonth(){
+        return cy.get('[name="DateOfBirthMonth"]')
     }
-    selectMonth(month){
-        cy.get('[name="DateOfBirthMonth"]').select(month)
+    getYear(){
+        return cy.get('[name="DateOfBirthYear"]')
     }
-    selectYear(year){
-        cy.get('[name="DateOfBirthYear"]').select(year)
+    getEmail(email){
+       return cy.get('#Email')
     }
-    fillEmail(email){
-        cy.get('#Email').type(email)
+    getPassword(){
+        return cy.get('#Password')
     }
-    fillCompanyName(company){
-        cy.get('#Company').type(company)
+    getConfirmPassword(){
+        return cy.get('#ConfirmPassword')
     }
-    fillPassword(password){
-        cy.get('#Password').type(password)
-    }
-    fillConfirmPassword(confirmpassword){
-        cy.get('#ConfirmPassword').type(confirmpassword)
-    }
-    submitForm(){
-        cy.get('[type="submit"]').contains('Register').click()
+    getsubmitForm(){
+        return cy.get('[type="submit"]').contains('Register')
     }
     assertRegistration(){
-        cy.contains('Your registration completed').should('exist')
+        return cy.contains('Your registration completed')
     }
-    assertEmailerrormessage(){
-        cy.contains('Wrong email').should('exist')
+    assertEmailerrorMessage(){
+        return cy.contains('Wrong email')
     }
 
-    assertFnameErrormessage(){
-        cy.contains('First name is required.').should('exist')
+    assertFnameErrorMessage(){
+        return cy.contains('First name is required.')
     }
 
     assertLastnameErrormessage(){
-        cy.contains('Last name is required.').should('exist')
+        return cy.contains('Last name is required.')
     }
 
     assertemptyEmailErrormessage(){
-        cy.contains('Email is required.').should('exist')
+        return cy.contains('Email is required.')
     }
 
     assertPasswordErrormessage(){
-        cy.contains('Password is required.').should('exist')
+        return cy.contains('Password is required.')
     }
     assertPasswordMismatchError(){
-        cy.contains('The password and confirmation password do not match.').should('exist')
+        return cy.contains('The password and confirmation password do not match.')
     }
 
 }

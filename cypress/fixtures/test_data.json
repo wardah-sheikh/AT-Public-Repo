@@ -5,5 +5,15 @@
 
   
   "Email": "helloworld@gmail.com",
-  "Password": "Helloworld12"
+  "Password": "Helloworld12",
+
+  "Text": "Testing",
+
+  "country": "United States",
+  "state": "Alabama",
+  "city": "New York",
+
+  "size": "8",
+  "search":"Shoes",
+  "InvalidData": "*()$^@"
 }
