@@ -22,7 +22,5 @@ export class Checkout{
     clickContinue(){
         cy.get('[name="save"]').contains('Continue').click()
     }
-    selectShippingmethod(){
-        
-    }
+
 }

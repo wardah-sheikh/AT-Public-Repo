@@ -3,7 +3,7 @@ const selectors = {
     emailInput: '[class="email"]',
     passwordInput: '#Password',
     rememberMeButton: '#RememberMe',
-    loginButton: '[type="submit"]',
+    loginButton: '[type="submit"]', 
 
     //Logout
     logoutButton: '.ico-logout',
