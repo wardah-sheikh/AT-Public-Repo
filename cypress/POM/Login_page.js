@@ -5,7 +5,7 @@ export class Login{
         return cy.get('.ico-login').contains('Log in')
     }
     getEmail(){
-        return cy.get('[class="email"]')
+        return cy.get('[class="email"]') 
     }
     getPassword(password){
         return cy.get('#Password')
@@ -31,7 +31,6 @@ export class Login{
     getLogoutButton(){
         return cy.get('.ico-logout').contains('Log out')
     }
-
     assertLogout(){
         return cy.contains('Log in').click()
     }

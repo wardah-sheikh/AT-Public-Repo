@@ -13,11 +13,12 @@ describe('To verify that user is able to checkout successfully', ()=>{
         cy.visit(urls.loginPageUrl);
         login(fixtureData.Email, fixtureData.Password)
         checkoutWithTermsAndService(fixtureData.Text)
-      })
+      }) 
     
       it('TC_01: Verify that the user is able to place the order successfully',()=>{
         fillCheckoutForm(fixtureData.country, fixtureData.state, fixtureData.city, address,
           zipcode, phone)
+          cy.get('title').should('have.text','Your order has been successfully processed!')
         
       })
 })
