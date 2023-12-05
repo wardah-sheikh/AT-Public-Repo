@@ -4,5 +4,10 @@
   },
   "devDependencies": {
     "@faker-js/faker": "^8.2.0"
+  },
+  "scripts": {
+    "CICD": "npx cypress run --headed"
   }
+  
+  
 }
