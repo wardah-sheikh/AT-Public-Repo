@@ -13,10 +13,10 @@ jobs:
           node-version: '14'  # Change the Node.js version to match your project requirements
 
       - name: Install Dependencies
-        working-directory: AT-Public-Repo/
+        working-directory: AT-Public-Repo
         run: npm install
 
       - name: Execute CI/CD Process
-        working-directory: AT-Public-Repo/
+        working-directory: AT-Public-Repo
         run: npm run CICD
 
