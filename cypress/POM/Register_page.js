@@ -30,7 +30,7 @@ export class RegisterForm {
     getsubmitForm(){
         return cy.get('[type="submit"]').contains('Register')
     }
-    assertRegistration(){
+    assertRegistration(){ 
         return cy.contains('Your registration completed')
     }
     assertEmailerrorMessage(){
