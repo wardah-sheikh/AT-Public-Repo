@@ -1,4 +1,4 @@
-name: GITHUB Actions
+name: hello-world
 on: push
 jobs:
   my-job:
@@ -12,12 +12,11 @@ jobs:
         with:
           node-version: '14'  # Change the Node.js version to match your project requirements
 
+      - name: Navigate to Repository Directory
+        run: cd AT-Public-Repo/ || exit 1  # Change to your project directory or exit with error if not found
+
       - name: Install Dependencies
-        run: |
-          cd AT-Public-Repo/  
-          npm install
+        run: npm install
 
       - name: Execute CI/CD Process
-        run: |
-          cd AT-Public-Repo/
-          npm run CICD
+        run: npm run CICD
