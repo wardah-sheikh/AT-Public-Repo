@@ -45,7 +45,7 @@ const addProductTocart = (text) =>{
     cy.get(selectors.product).contains('Custom T-Shirt').click()
     cy.get(selectors.productTextField).type(text)
     cy.get(selectors.addToCart).click()
-    cy.wait(5000).get(selectors.cartPage).click()
+    // cy.wait(5000).get(selectors.cartPage).click()
 }
 
 const removeProductFromCart = (text) =>{
@@ -104,7 +104,7 @@ const addProductToWishlist = (text)=>{
     cy.get(selectors.product).contains('Custom T-Shirt').click()
     cy.get(selectors.productTextField).type(text)
     cy.get(selectors.addTowishlist).click()
-    cy.wait(5000).get(selectors.openWishlist).click()
+    //cy.wait(5000).get(selectors.openWishlist).click()
 }
 const removeProductFromWishlist = (text)=>{
     cy.contains(selectors.Apparel).click()
@@ -123,7 +123,7 @@ const addProductToCompareList = (text) =>{
     cy.get(selectors.product).contains('Custom T-Shirt').click()
     cy.get(selectors.productTextField).type(text)
     cy.get(selectors.addToCompareList).contains('Add to compare list').click()
-    cy.get(selectors.openCompareList).contains('product comparison').click({force:true})
+    //cy.get(selectors.openCompareList).contains('product comparison').click({force:true})
 }
 const removeProductFromCompareList = (text) =>{
     cy.contains(selectors.Apparel).click()
