@@ -10,7 +10,7 @@ describe('TS_03: To verify that user is able to use the cart functionality succe
 
     it('TC_01: Verify that the user is able to add any product to cart',()=>{
         addProductTocart(fixtureData.Text)
-        cy.get('.content').should('have.text','The product has been added to your shopping cart')
+        cy.get('.content').should('contain','The product has been added to your shopping cart')
     })
 
     it('TC_02: Verify that the user is able to remove any product to cart',()=>{

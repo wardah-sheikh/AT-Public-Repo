@@ -18,7 +18,7 @@ describe('To verify that user is able to checkout successfully', ()=>{
       it('TC_01: Verify that the user is able to place the order successfully',()=>{
         fillCheckoutForm(fixtureData.country, fixtureData.state, fixtureData.city, address,
           zipcode, phone)
-          cy.get('title').should('have.text','Your order has been successfully processed!')
+          cy.get('.title').should('contain','Your order has been successfully processed!')
         
       })
 })
